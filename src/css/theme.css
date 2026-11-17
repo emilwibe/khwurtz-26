@@ -1,0 +1,94 @@
+:root {
+    /*! BASE */
+    --t-font-family: "DM Mono";
+    --t-font-size: 20px;
+    --t-line-height: 1.1;
+    --t-font-weight: 400;
+    --t-spacing-unit: 8px;
+
+    --t-font-family-2: "Instrument Serif";
+    --t-font-family-3: 'DM Sans', sans-serif;
+
+    --t-clr-black: #000;
+    --t-clr-dark-900:#111110;
+    --t-clr-dark-500: #9A9C9A;
+    --t-clr-white: #fff;
+    --t-clr-bright-100: #EBEDE7;
+    --t-clr-green-100: #D8DECA;
+    --t-clr-green-300: #99A27D;
+    --t-clr-rouge-300: #A96D75;
+    --t-clr-blue-300: #1A617A;
+    --t-clr-alternate: #D8DED4;
+
+    --t-body-background: var(--t-clr-white);
+    --t-body-color: var(var(--t-clr-black));
+
+    /*! HEADINGS */
+    --t-h-font-family: var(--t-font-family-2);  
+    --t-h-font-weight: 500;      
+    --t-h-font-style: normal;
+    --t-h-text-transform: uppercase;
+
+    --t-h1-font-size: 112px;
+    --t-h1-font-weight: 700;
+    --t-h1-line-height: 1.1;
+    --t-h1-text-transform: var(--t-h-text-transform);
+    --t-h1-nxt-el: 20px;
+
+    --t-h2-font-size: 80px;
+    --t-h2-font-weight: 500;
+    --t-h2-line-height: 1.1;
+    --t-h2-text-transform: var(--t-h-text-transform);
+    --t-h2-nxt-el: 20px;
+
+    --t-h3-font-size: 56px;
+    --t-h3-font-weight: 300;
+    --t-h3-line-height: 1.4;
+    --t-h3-text-transform: var(--t-h-text-transform);
+    --t-h3-nxt-el: 16px;
+
+    --t-h4-font-size: 40px;
+    --t-h4-font-weight: 300;
+    --t-h4-line-height: 1.4;
+    --t-h4-text-transform: var(--t-h-text-transform);
+    --t-h4-nxt-el: 14px;
+
+    --t-h5-font-size: 28px;
+    --t-h5-font-weight: 400;
+    --t-h5-line-height: 1.1;
+    --t-h5-text-transform: var(--t-h-text-transform);
+    --t-h5-nxt-el: 12px;
+
+    --t-h6-font-size: 20px;
+    --t-h6-font-weight: 400;
+    --t-h6-line-height: 1.1;
+    --t-h6-text-transform: var(--t-h-text-transform);
+    --t-h6-nxt-el: 12px;
+
+    /*! LAYOUT */
+    --l-w-xxl: 1360px;
+    --l-w-xl: 1200px;
+    --l-w-l: 960px;
+    --l-w-m: 768px;
+    --l-w-s: 680px;
+    --l-w-xs: 480px;
+
+    /*! MODULE */
+    --t-header-height: calc(var(--t-spacing-unit) * 9);
+    --t-divider-height: calc(var(--t-spacing-unit) * 9);
+    /*! UTIL */
+    --global-borders: 1px solid var(--t-clr-black);
+}
+@media screen and (max-width: 960px) {
+    :root {
+        /*! BASE */
+        --t-distance-top-bot: 24px;
+        --t-header-height: 120px;
+    }   
+}
+@media screen and (max-width: 768px) {
+    :root {
+        /*! MODULE */
+        --t-divider-height: calc(var(--t-spacing-unit) * 15);
+    }
+}

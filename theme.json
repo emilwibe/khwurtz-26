@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "settings": {
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "defaultDuotone": false
+    },
+    "typography": {
+      "defaultFontSizes": false,
+      "dropCap": false
+    },
+    "spacing": {
+      "defaultSpacingSizes": false
+    }
+  }
+}

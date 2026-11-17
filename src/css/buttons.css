@@ -1,0 +1,60 @@
+:is(a, button, input[type="submit"]).btn {
+  background-color: transparent;
+  border: none;
+  color: var(--t-clr-dark-100);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--t-font-weight);
+  padding: 0;
+  position: relative;
+}
+:is(a, button, input[type="submit"]).btn:focus {
+  outline: none;
+}
+:is(a, button, input[type="submit"]).btn:hover {
+  cursor: pointer;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--t-spacing-unit) * 2.5);
+}
+.btn-outer {
+  position: relative;
+}
+.btn-outer.icon-after .btn {
+  padding-right: 84px !important;
+}
+.btn-outer.icon-after::after {
+  background-image: url(../../assets/ui-svg/arrow-right.svg);
+  background-position: 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 46px;
+  transform: translateY(-50%);
+  transition: background-position 0.4s;
+}
+@media screen and (min-width: 768px) {
+  .btn-outer.icon-after:hover::after {
+    background-position: 0;
+  }
+}
+.btn {
+  font-family: var(--t-font-family);
+  font-size: 14px;
+  padding: 16px 54px !important;
+  text-transform: uppercase;
+}
+.btn.border {
+  border: var(--global-borders) !important;
+}
+.btn.rounded {
+  border-radius: 40px;
+}

@@ -1,0 +1,97 @@
+body#tinymce.wp-editor {
+  font-family: var(--t-font-family);
+  font-size: var(--t-font-size);
+}
+body#tinymce > *:first-of-type,
+body#tinymce > *:first-child {
+  margin-top: 0;
+}
+
+body#tinymce {
+  body {
+    font-family: var(--t-font-family);
+    font-size: var(--t-font-size);
+    font-synthesis: none;
+    font-weight: var(--t-font-weight);
+    line-height: var(--t-line-height);
+    margin: 10px;
+    text-rendering: optimizeLegibility;
+  }
+  a {
+    color: var(--t-clr-dark-100);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--t-h-font-family);
+    font-optical-sizing: auto;
+    font-weight: var(--t-h-font-weight);
+    font-style: var(--t-h-font-style);
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: var(--t-h-text-transform);
+  }
+  h1 {
+    font-size: var(--t-h1-font-size);
+    font-weight: var(--t-h1-font-weight);
+    line-height: var(--t-h1-line-height);
+    text-transform: var(--t-h1-text-transform);
+  }
+  h1 + * {
+    margin-top: var(--t-h1-nxt-el);
+  }
+  h2 {
+    font-size: var(--t-h2-font-size);
+    font-weight: var(--t-h2-font-weight);
+    line-height: var(--t-h2-line-height);
+    text-transform: var(--t-h2-text-transform);
+  }
+  h2 + * {
+    margin-top: var(--t-h2-nxt-el);
+  }
+  h3 {
+    font-size: var(--t-h3-font-size);
+    font-weight: var(--t-h3-font-weight);
+    line-height: var(--t-h3-line-height);
+    text-transform: var(--t-h3-text-transform);
+  }
+  h3 + * {
+    margin-top: var(--t-h3-nxt-el);
+  }
+  h4 {
+    font-size: var(--t-h4-font-size);
+    font-weight: var(--t-h4-font-weight);
+    line-height: var(--t-h4-line-height);
+    text-transform: var(--t-h4-text-transform);
+  }
+  h4 + * {
+    margin-top: var(--t-h4-nxt-el);
+  }
+  h5 {
+    font-size: var(--t-h5-font-size);
+    font-weight: var(--t-h5-font-weight);
+    line-height: var(--t-h5-line-height);
+    text-transform: var(--t-h5-text-transform);
+  }
+  h5 + * {
+    margin-top: var(--t-h5-nxt-el);
+  }
+  h6 {
+    font-size: 15px;
+    font-family: var(--font-family) !important;
+    line-height: 110%;
+    margin-bottom: 0;
+    text-transform: var(--t-h6-text-transform);
+  }
+  h6 + * {
+    margin-top: var(--t-h6-nxt-el);
+  }
+  .editor-col-2 {
+    column-count: 2;
+  }
+}

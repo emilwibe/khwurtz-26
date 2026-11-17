@@ -1,0 +1,33 @@
+{
+  "name": "khwurtz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emil Wibe - EW Web",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/register": "^7.24.6",
+    "@splidejs/splide": "^4.1.4",
+    "countup.js": "^2.10.1",
+    "glightbox": "^3.3.1",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-strip-css-comments": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "scrollreveal": "^4.0.9"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
