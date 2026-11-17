@@ -28,6 +28,10 @@ $kh_datetime = new DateTime('now', $kh_timezone);
             document.body.classList.add("page-loaded");
         });
 
+        if (window.scrollY == 0) {
+            document.body.classList.add("hero-video-popup-active");
+        }
+
     </script>
 
     <?php wp_head(); ?>

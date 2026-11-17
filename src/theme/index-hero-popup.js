@@ -4,14 +4,14 @@
     if (hero_popup) {
         hero_popup.addEventListener("click", function(e) {
             if (e.target.tagName == "BUTTON") {
-                document.body.classList.add("hero-video-popup-closed");
+                document.body.classList.remove("hero-video-popup-active");
             }
         });
     }
 
     const checkScroll = () => {
-        if (window.scrollY > 0) {
-            document.body.classList.add("hero-video-popup-closed");
+        if (window.scrollY == 0) {
+            document.body.classList.add("hero-video-popup-active");
         }
     };
 

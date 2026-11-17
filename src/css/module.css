@@ -87,11 +87,8 @@
   }
 }
 /*! Home Page */
-.home {
-  overflow-y: hidden;
-}
-.home.hero-video-popup-closed {
-  overflow-y: auto;
+.home.hero-video-popup-active {
+  /*overflow-y: hidden;*/
 }
 
 :is(.home, .page-template-ct-workshop) .header-global {
@@ -103,7 +100,7 @@
   width: 100%;
   z-index: 50;
 }
-:is(.home, .page-template-ct-workshop):is(.hero-video-popup-closed, .scrolled)
+:is(.home, .page-template-ct-workshop):is(:not(.hero-video-popup-active), .scrolled)
   .header-global {
   transform: translateY(0);
 }
@@ -316,6 +313,7 @@
 }
 .kh-hero-video-container {
   height: calc(100vh - var(--t-header-height));
+  height: 100vh !important;
   margin-left: auto !important;
   margin-right: auto !important;
   max-width: 100%;
@@ -326,11 +324,14 @@
     max-width 0.8s;
   transition-delay: 1s;
 }
-.kh-hero-video-container:first-child {
-  height: 100vh;
+.hero-video-popup-active .kh-hero-video-container {
+  width: 100% !important;
+  max-width: 100vw !important;
+  transition:
+    width 0.8s,
+    max-width 0.8s;
 }
 .kh-hero-video {
-  filter: blur(16.25px);
   display: block;
   width: calc(100% + 42px);
   height: calc(100% + 42px);
@@ -339,14 +340,20 @@
   transform: translate(-21px, -21px);
   transition: filter 0.4s;
 }
-.hero-video-popup-closed .kh-hero-video-container {
+.hero-video-popup-active .kh-hero-video {
+  filter: blur(16.25px);
+}
+.kh-hero-video-container {
   max-width: var(--l-w-xxl) !important;
   width: calc(100% - 6 * var(--t-spacing-unit)) !important;
+  transition:
+    width 0.8s,
+    max-width 0.8s;
 }
-.hero-video-popup-closed .kh-hero-video {
+.kh-hero-video {
   filter: blur(0);
 }
-.kh-hero-video-container .popup {
+.hero-video-popup-active .kh-hero-video-container .popup {
   background-color: var(--t-clr-white);
   border: var(--global-borders);
   display: flex;
@@ -407,7 +414,7 @@
   transform: translateY(-50%);
   width: 20px;
 }
-.hero-video-popup-closed .kh-hero-video-container .popup {
+.kh-hero-video-container .popup {
   display: none;
 }
 @media screen and (max-width: 680px) {
