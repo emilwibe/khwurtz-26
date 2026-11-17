@@ -16,12 +16,12 @@
 .nav-cols {
     opacity: 0;
     transform: translateY(-400%);
-    transition: transform .4s, opacity 0.6s;
+    transition: transform 1.2s, opacity 1.2s linear;
 }
 .nav-is-open .nav-cols:not(.store-locator-nav) {
     opacity: 1;
     transform: translateY(1px);
-    transition: transform 0.4s;
+    transition: transform 1.2s, opacity 1.2s linear;
 }
 :is(.slider-is-open) {
     overflow-y: hidden;

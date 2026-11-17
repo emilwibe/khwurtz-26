@@ -64,6 +64,8 @@ $kh_datetime = new DateTime('now', $kh_timezone);
 
                 <button id="nav-toggle" class="btn nav-toggle">Menu</button>
 
+                <div class="nav-hider"></div>
+
                 <?php get_template_part('tp/nav-primary'); ?>
 
             </div>

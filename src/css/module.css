@@ -34,6 +34,16 @@
   padding-right: calc(var(--t-spacing-unit) * 1.5);
   position: relative;
 }
+.nav-hider {
+  background-color: var(--t-clr-white);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  height: 71px;
+}
 .header-global .logo-link {
   align-self: center;
 }
@@ -104,6 +114,7 @@
   padding-right: calc(var(--t-spacing-unit) * 3.75);
   position: relative;
   text-transform: lowercase;
+  z-index: 50;
 }
 .header-global .nav-toggle:hover {
   cursor: pointer;
@@ -135,7 +146,7 @@
   left: -1px;
   right: -1px;
   top: 100%;
-  z-index: 50;
+  z-index: 30;
 }
 .header-global .nav-cols > * {
   width: 50%;
