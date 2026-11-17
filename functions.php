@@ -39,3 +39,7 @@ get_template_part( 'functions/eww_tinyMCE' );
 get_template_part( 'functions/eww_tinymce_buttons' );
 
 get_template_part( 'functions/eww_attachment_custom_field' );
+
+add_action('wp', function () {
+    //error_log('IS 404: ' . (is_404() ? 'YES' : 'NO'));
+});
