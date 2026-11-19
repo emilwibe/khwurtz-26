@@ -12,7 +12,16 @@
 
             <?php while( have_rows( 'kh_flex_repeater_stories' ) ) : the_row(); $story_ID = get_sub_field( 'kh_flex_repeater_story' ); ?>
 
-                <li><a href="<?php echo get_permalink($story_ID); ?>"><?php echo get_the_title( $story_ID ); ?></a></li>
+                <li class="story-item-<?php echo get_the_title($story_ID); ?>">
+                    <a href="<?php echo get_permalink($story_ID); ?>"><?php echo get_the_title( $story_ID ); ?></a>
+                    <div class="flex-slide-container">
+
+                        <?php echo wp_get_attachment_image( get_field( 'nav_image_1', $story_ID ), 'ewl-full', false, ["class" => "load-media-on-load", 'onload' => 'loadMediaonLoad(this)']); ?>
+                        <?php echo wp_get_attachment_image( get_field( 'nav_image_2', $story_ID ), 'ewl-full', false, ["class" => "load-media-on-load", 'onload' => 'loadMediaonLoad(this)']); ?>
+                        <?php echo wp_get_attachment_image( get_field( 'nav_image_3', $story_ID ), 'ewl-full', false, ["class" => "load-media-on-load", 'onload' => 'loadMediaonLoad(this)']); ?>
+
+                    </div><!--/.menu-slide-container-->
+                </li>
 
             <?php endwhile; ?>
 

@@ -100,7 +100,10 @@
   width: 100%;
   z-index: 50;
 }
-:is(.home, .page-template-ct-workshop):is(:not(.hero-video-popup-active), .scrolled)
+:is(.home, .page-template-ct-workshop):is(
+    :not(.hero-video-popup-active),
+    .scrolled
+  )
   .header-global {
   transform: translateY(0);
 }
@@ -1255,8 +1258,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 758px;
 }
 .flex-stories-inner li + li {
   margin-top: 40px;
@@ -1267,6 +1271,105 @@
   font-family: var(--t-font-family-2);
   font-size: 56px;
   text-align: center;
+}
+.flex-stories-inner .flex-slide-container {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s;
+  z-index: -1;
+}
+.flex-stories-inner a:hover + .flex-slide-container {
+  opacity: 1;
+}
+.flex-stories-inner .flex-slide-container img {
+  position: absolute;
+}
+@media screen and (min-width: 769px) {
+  .flex-stories-inner
+    .story-item-Woodfired
+    .flex-slide-container
+    img:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 40.8%;
+    height: auto;
+  }
+  .flex-stories-inner
+    .story-item-Woodfired
+    .flex-slide-container
+    img:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 24.26%;
+    height: auto;
+  }
+  .flex-stories-inner
+    .story-item-Woodfired
+    .flex-slide-container
+    img:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 32.35%;
+    height: auto;
+  }
+  .flex-stories-inner
+    .story-item-Details
+    .flex-slide-container
+    img:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 32.35%;
+    height: auto;
+  }
+  .flex-stories-inner
+    .story-item-Details
+    .flex-slide-container
+    img:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 32.28%;
+    height: auto;
+  }
+  .flex-stories-inner
+    .story-item-Workshop
+    .flex-slide-container
+    img:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 23.9%;
+    height: auto;
+  }
+  .flex-stories-inner
+    .story-item-Workshop
+    .flex-slide-container
+    img:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 32.43%;
+    height: auto;
+  }
+  .flex-stories-inner
+    .story-item-Pieces
+    .flex-slide-container
+    img:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 32.28%;
+    height: auto;
+  }
+  .flex-stories-inner
+    .story-item-Pieces
+    .flex-slide-container
+    img:nth-child(2) {
+    right: 0;
+    bottom: 0;
+    width: 23.97%;
+    height: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .flex_mod_stories .flex-mod-inner {
@@ -1930,6 +2033,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .archive-hero {
+    padding: 43px;
+  }
   .the-archive-slide-deck > ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
