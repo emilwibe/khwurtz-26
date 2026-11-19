@@ -14,14 +14,12 @@
     transition: transform .6s;
 }*/
 .nav-cols {
-    opacity: 0;
     transform: translateY(-400%);
-    transition: transform 1.2s, opacity 1.2s linear;
+    transition: transform 1.2s;
 }
 .nav-is-open .nav-cols:not(.store-locator-nav) {
-    opacity: 1;
     transform: translateY(1px);
-    transition: transform 1.2s, opacity 1.2s linear;
+    transition: transform 1.2s;
 }
 :is(.slider-is-open) {
     overflow-y: hidden;
